@@ -82,7 +82,7 @@ RUN git clone --depth 1 --recursive https://github.com/simsong/bulk_extractor &&
     rm -rf /tmp/bulk_extractor
 
 # Install and configure Caffe
-ENV CAFFE_ROOT /opt/caffe
+ENV CAFFE_ROOT=/opt/caffe
 WORKDIR $CAFFE_ROOT
 
 RUN git clone -b 1.0 --depth 1 https://github.com/BVLC/caffe . && \
@@ -99,7 +99,7 @@ ENV PYCAFFE_ROOT=$CAFFE_ROOT/python \
 RUN echo "$CAFFE_ROOT/build/lib" >> /etc/ld.so.conf.d/caffe.conf && ldconfig
 
 # Install and configure open_nsfw
-ENV OPEN_NSFW_ROOT /opt/open_nsfw
+ENV OPEN_NSFW_ROOT=/opt/open_nsfw
 WORKDIR $OPEN_NSFW_ROOT
 
 RUN git clone --depth 1 https://github.com/yahoo/open_nsfw . && \
