@@ -2,7 +2,7 @@
 
 [![Build](https://img.shields.io/travis/jgarber623/docker-forensics-tools.svg?style=for-the-badge)](https://travis-ci.org/jgarber623/docker-forensics-tools)
 
-A [Docker](https://www.docker.com) image built with useful forensics-related tools. This image includes tools from the [forensics-all](https://packages.debian.org/unstable/forensics-all) and [forensics-extra](https://packages.debian.org/unstable/forensics-extra) Debian metapackages.
+A [Docker](https://www.docker.com) image built with useful forensics-related tools. This image includes tools from the [forensics-all](https://packages.debian.org/unstable/forensics-all) and [forensics-extra](https://packages.debian.org/unstable/forensics-extra) Debian metapackages and [Yahoo's open_nsfw Caffe models](https://github.com/yahoo/open_nsfw).
 
 ## Installation
 
@@ -30,10 +30,10 @@ This command will create a tagged image with the tools described in [`Dockerfile
 
 ## Running
 
-To launch a container to a [Bash](https://www.gnu.org/software/bash/) prompt, run the following command:
+Run the generated image using the following command:
 
 ```sh
-docker run --rm -it forensics-tools bash
+docker run --rm -it forensics-tools
 ```
 
 This command will run an interactive session (`-i`), allocate a pseudo-TTY (`-t`), and remove the container when exiting (`--rm`).
