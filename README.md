@@ -1,8 +1,10 @@
 # docker-forensics-tools
 
+**A [Docker](https://www.docker.com) image containing useful forensics tools.**
+
 [![Build](https://img.shields.io/travis/jgarber623/docker-forensics-tools.svg?style=for-the-badge)](https://travis-ci.org/jgarber623/docker-forensics-tools)
 
-A [Docker](https://www.docker.com) image built with useful forensics-related tools. This image includes tools from the [forensics-all](https://packages.debian.org/unstable/forensics-all) and [forensics-extra](https://packages.debian.org/unstable/forensics-extra) Debian metapackages and [Yahoo's open_nsfw Caffe models](https://github.com/yahoo/open_nsfw).
+This image includes tools from the [forensics-all](https://packages.debian.org/unstable/forensics-all) and [forensics-extra](https://packages.debian.org/unstable/forensics-extra) Debian metapackages, [Simson Garfinkel's bulk_extractor](https://github.com/simsong/bulk_extractor), and [Yahoo's open_nsfw Caffe models](https://github.com/yahoo/open_nsfw).
 
 ## Installation
 
