@@ -1,5 +1,7 @@
 # docker-forensics-tools
 
+[![Build](https://img.shields.io/travis/jgarber623/docker-forensics-tools.svg?style=for-the-badge)](https://travis-ci.org/jgarber623/docker-forensics-tools)
+
 A [Docker](https://www.docker.com) image built with useful forensics-related tools. This image includes tools from the [forensics-all](https://packages.debian.org/unstable/forensics-all) and [forensics-extra](https://packages.debian.org/unstable/forensics-extra) Debian metapackages.
 
 ## Installation
