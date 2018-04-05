@@ -1,0 +1,14 @@
+sudo: required
+language: python
+services:
+  - docker
+install:
+  - docker build -t forensics-tools .
+  - docker run -d forensics-tools
+script:
+  - docker ps | grep -q forensics-tools
+notifications:
+  email: false
+  slack:
+    rooms:
+      secure: p+kNdnqZtngoxnkWKmoLOmL4rb8Q4KoEayH9vrefSP2eHoLbMowFllZGgSdZLR1ky+mti6oOBaRW/LuN6BDNUaCuBjDl79nxSZpG4YQBx260LR0E+V3BkE0ZkVuI2qhRgj1rouKgnmzNNKK2rl8RQgkEcw0gqGFwqEgWaI2lbI+lCTwkj3NnqO7WoQcnafVyZuL6M4Ehy8mgsTQq9kYLru+9dQr1b9VVlwW0MdRStD0eFfRnJUH8IoUHoJAl86UT9FHnR/1wm0LwUfHDC+Fc7U32+CvVQIUHmCugYY984vYXxSE3YrAgPTwC+CZ3dvL1DABYavfPjgSsaLWiaOPk13z0DySusafDhyZsd4994sZIpczKIjSwQrLDVODlb5ZBFJUm0KYyqWeXeiZDrp16wwEiR0/UHhDHNlZi71tmR1TJMWS0XjNL8D4+ylV71CRCF06BKF4pwWt1yqtCsY6zVsA+dR9GbqsltEMjnmFMUq18D23sfMikPbOy8qliWEkDe/KpJem1SY3KEI5GEtzjuVvf8gIB7uZkLbdqjLMjNY7slZcnR2KXKUKAmWx6ctuwmBf74RaJEyMkOtfF2bFsIpOgazzRzEcBFpA6xmZlO8QWjCL+ooPn6RoRG5Wxk/evhgKAa1YzriytlDonkVLeY9yMUBCCYRz7/YbhbEX7T0Q=
