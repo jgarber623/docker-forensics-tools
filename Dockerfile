@@ -111,7 +111,55 @@ ENV OPEN_NSFW_MODEL_ROOT=$OPEN_NSFW_ROOT/nsfw_model \
     PATH=$OPEN_NSFW_ROOT:$PATH
 
 # Post-installation cleanup
-RUN apt-get clean && \
+RUN apt-get remove -y \
+      ant \
+      autoconf \
+      automake \
+      autotools-dev \
+      bison \
+      build-essential \
+      clang \
+      cmake \
+      g++ \
+      g++-6 \
+      gcc \
+      gcc-6 \
+      libatlas-base-dev \
+      libboost-all-dev \
+      libboost1.62-dev \
+      libbz2-dev \
+      libc6-dev \
+      libclang-common-3.8-dev \
+      libclang-common-3.9-dev \
+      libclc-dev \
+      libewf-dev \
+      libgcc-6-dev \
+      libgflags-dev \
+      libgoogle-glog-dev \
+      libhdf5-serial-dev \
+      libicu-dev \
+      libleveldb-dev \
+      liblmdb-dev \
+      libltdl-dev \
+      libncurses5-dev \
+      libobjc-6-dev \
+      libopencv-dev \
+      libprotobuf-dev \
+      libsmdev1 \
+      libsnappy-dev \
+      libsqlite3-dev \
+      libssl-dev \
+      libstdc++-6-dev \
+      libtre-dev \
+      libxml2-dev \
+      linux-libc-dev \
+      make \
+      openjdk-8-jdk \
+      pkg-config \
+      python-dev \
+      zlib1g-dev && \
+    apt-get autoclean -y && \
+    apt-get autoremove -y && \
     rm -rf /tmp/* /var/tmp/*
 
 # Set default working directory
