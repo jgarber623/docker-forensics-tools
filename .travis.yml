@@ -3,10 +3,13 @@ language: python
 services:
   - docker
 install:
-  - docker build -t forensics-tools .
-  - docker run -d forensics-tools
+  - docker build -t forensics-tools:base ./base
+  - docker build -t forensics-tools:bulk_extractor ./bulk_extractor
+  - docker run -d forensics-tools:base
+  - docker run -d forensics-tools:bulk_extractor
 script:
-  - docker ps | grep -q forensics-tools
+  - docker ps | grep -q forensics-tools:base
+  - docker ps | grep -q forensics-tools:bulk_extractor
 notifications:
   email: false
   slack:
